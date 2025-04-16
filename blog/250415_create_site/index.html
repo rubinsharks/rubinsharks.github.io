@@ -1,7 +1,7 @@
 <head>
 	<meta charset="UTF-8"></meta>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"></link>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" rel="stylesheet"></link>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 	<script>hljs.highlightAll();</script>
@@ -11,69 +11,32 @@
 <body class="container mx-auto bg-white">
 <nav class="bg-white border-gray-200"><div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"><a href="/" class="flex items-center space-x-3 rtl:space-x-reverse"><span class="self-center text-2xl font-semibold whitespace-nowrap">Rubinsharks</span></a><button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false"><span class="sr-only">Open main menu</span><svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg></button><div class="hidden w-full md:block md:w-auto" id="navbar-dropdown"><ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"><li><a href="/about_me" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">About me</a></li><li><a href="/blog" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">Blog</a></li><li><a href="/works" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">Works</a></li></ul></div></div></nav><div class="max-w-screen-xl mx-auto px-4">
 	<h1 class="text-4xl font-bold mb-3 mt-5 text-slate-900">
-		Works
+		정적 사이트 구축을 위해 Prema 제작
 	</h1>
 	<h3 class="text-2xl font-bold mb-3 mt-5 text-slate-900">
-		<a href="/works/prema">
-			Prema
-		</a>
+		Prema란
 	</h3>
-	<ol class="list-disc pl-5 text-slate-500">
-		<li>
-			<p class="text-slate-500 mt-1">
-				Language: Rust
-			</p>
-		</li>
-		<li>
-			<p class="text-slate-500 mt-1">
-				Prema make markdown to html
-			</p>
-		</li>
-	</ol>
+	<p class="text-slate-500 mt-1">
+		Pretty Markdown의 약자로서 Markdown을 이쁘게 만들어준다는 의미이다. 자신의 마크다운 문서가 html로 컨버팅되는 것이 사실 엄청 신기한 일은 아닐수 있다. 왜냐하면 github에서 markdown을 올리면 사실 이미 그냥 볼 수 있기 때문이다. 하지만 분명히 한계가 있다. 내 사이트는 구축하고 싶은데 node를 하자니 왠지 불필요한 공수가 들어가는 거 같고 flutter를 하자니 web으로는 뭔가 이쁘지가 않다.
+	</p>
 	<h3 class="text-2xl font-bold mb-3 mt-5 text-slate-900">
-		<a href="/works/simtra">
-			Simtra
-		</a>
+		rust로 제작한 이유
 	</h3>
-	<ol class="list-disc pl-5 text-slate-500">
-		<li>
-			<p class="text-slate-500 mt-1">
-				Language: Swift
-			</p>
-		</li>
-		<li>
-			<p class="text-slate-500 mt-1">
-				Simple Translator using ai in ios app.
-			</p>
-		</li>
-		<li>
-			<p class="text-slate-500 mt-1">
-				Coming soon.
-			</p>
-		</li>
-	</ol>
+	<p class="text-slate-500 mt-1">
+		rust를 할 줄 아니까 markdown을 converting하는 프로그램을 제작해보는게 어떤가 싶었다. 사실 python에 비하면 생산성이 높지는 않고.. 속도가 빠르다지만 이것을 제작하는데 python보다 속도가 빠를 필요는 없다;; 하지만 python보다는 rust를 연습하고 싶었고 특히 배포나 크로스 컴파일 부분에서 확실한 이점이 있다. c만큼 성능이 나와야 하는 rust입장에서 어쩔수 없이 코드 제작시의 생산성을 어느정도 희생했는데 그 부분을 제외하고는 대부분 좋다.
+	</p>
 	<h3 class="text-2xl font-bold mb-3 mt-5 text-slate-900">
-		<a href="/works/neupporter">
-			Neupporter
-		</a>
+		Prema 원리
 	</h3>
-	<ol class="list-disc pl-5 text-slate-500">
-		<li>
-			<p class="text-slate-500 mt-1">
-				Language: Rust
-			</p>
-		</li>
-		<li>
-			<p class="text-slate-500 mt-1">
-				AI Code Generator
-			</p>
-		</li>
-		<li>
-			<p class="text-slate-500 mt-1">
-				Coming soon.
-			</p>
-		</li>
-	</ol>
+	<p class="text-slate-500 mt-1">
+		마크다운을 html로 그냥 만들면 당연히 이쁘지가 않기 때문에 이쁘게 해주는 프레임워크를 찾아야 했다. 크게 수고하지는 않았다. 이미 유명한 tailwindcss가 있었고 이것을 보조해주는 flowbite가 있었기 때문에 이것을 사용하기로 했다. 사실 마크다운만 이쁘게 html로 변경하는 것은 크게 의미있는 일은 아니었다. 하지만 이후 옵션을 통해 메뉴(Nav) 및 푸터(Footer)를 추가하는 것은 그냥 마크다운을 변환하는 것 이상의 의미가 있다고 생각했다.
+	</p>
+	<h3 class="text-2xl font-bold mb-3 mt-5 text-slate-900">
+		앞으로는
+	</h3>
+	<p class="text-slate-500 mt-1">
+		애초에 복잡하게 제작할 의도가 없었고 심플하게 갈 것이다. 애초에 github.io를 타겟으로 해서 만들어졌는데 아무래도 주소가 {id}.github.io로 들어가는게 마음에 들었다. 은근히 사이트나 블로그를 만드는 것은 많은 시간을 요하는 일이다. 마크다운 파일은 이미 어디서도 잘 사용할 수 있는 문서이기 때문에 이 파일 형식을 크게 훼손하지 않으면서 이쁘게 사이트를 제작할 수 있는 정도로만 생각하고 있고 그정도가 됐다고 하면 아마 거의 마이너하게만 수정하지 않을까 생각한다.
+	</p>
 </div><div class="left-0 h-20 w-full"></div><footer class="fixed bottom-0 left-0 z-20 w-full p-6 bg-white border-t border-gray-200 shadow-sm md:flex md:items-center md:justify-between md:p-6"><div class="sm:flex sm:items-center sm:justify-between"><span class="text-sm text-gray-500 sm:text-center">Copyright © 2025 Rubinsharks Inc.</span><div class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0"><a href=https://www.github.com/rubinsharks class="text-gray-500 hover:text-gray-900 ms-5">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
