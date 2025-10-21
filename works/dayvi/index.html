@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8"></meta>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" rel="stylesheet"></link>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"></link>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 		<script>
@@ -12,38 +12,38 @@
 		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
-		<div id="root" style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:column; flex-shrink: 0; overflow: hidden; gap:0px;" class="items-start w-[100%] h-[100%]">
+		<div style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:column; flex-shrink: 0; overflow: hidden; gap:0px;" class="items-start w-[100%] h-[100%]" id="root">
 			<div id="embed_header" style="background:transparent; padding:0px 0px 0px 0px; gap:0px;" class="w-[100%]">
 				<div class="w-[100%] mx-auto max-w-screen-xl" id="nav">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
-							<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+							<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
 								<span class="self-center text-2xl font-semibold whitespace-nowrap">
 								Rubinsharks	
 								</span>
 							</a>
-							<button aria-controls="navbar-dropdown" aria-expanded="false" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" data-collapse-toggle="navbar-dropdown" type="button">
-								<svg class="w-5 h-5" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
-									<path stroke="currentColor" stroke-linecap="round" stroke-width="2" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15"></path>
+							<button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded="false" data-collapse-toggle="navbar-dropdown" aria-controls="navbar-dropdown">
+								<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 17 14">
+									<path stroke-linecap="round" stroke="currentColor" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" stroke-width="2"></path>
 								</svg>
 								<span class="sr-only">
 								Open main menu	
 								</span>
 							</button>
-							<div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
 								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/">
+										<a aria-current="page" href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										home	
 										</a>
 									</li>
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/about_me/">
+										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/about_me/">
 										About me	
 										</a>
 									</li>
 									<li>
-										<a href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
+										<a aria-current="page" href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Blog	
 										</a>
 									</li>
@@ -58,31 +58,31 @@
 					</nav>
 				</div>
 			</div>
-			<div style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:column; flex-shrink: 0; overflow-y: auto; gap:0px;" id="contents" class="items-start w-[100%] h-[100%]">
-				<span id="title" style="background:transparent; padding:20px 20px 0px 20px; display: flex; font-size:30px; color:black; font-family:montserrat; font-weight:bold; justify-content: left; align-items: top;" class="">
+			<div class="items-start w-[100%] h-[100%] mx-auto max-w-screen-xl" id="contents" style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:column; flex-shrink: 0; overflow-y: auto; gap:0px;">
+				<span class="" style="background:transparent; padding:20px 20px 0px 20px; display: flex; font-size:30px; color:black; font-family:montserrat; font-weight:bold; justify-content: left; align-items: top;" id="title">
 				DayVI	
 				</span>
-				<span style="background:transparent; padding:12px 20px 0px 20px; display: flex; font-size:20px; color:black; font-family:montserrat; font-weight:regular; justify-content: left; align-items: top;" class="" id="desc">
+				<span class="" style="background:transparent; padding:12px 20px 0px 20px; display: flex; font-size:20px; color:black; font-family:montserrat; font-weight:regular; justify-content: left; align-items: top;" id="desc">
 				Simple Video Diary Summary.	
 				</span>
-				<div style="background:transparent; padding:20px 20px 0px 20px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px;" class="items-start" id="images">
-					<img style="background:transparent; padding:0px 0px 0px 0px; display: flex;" class="object-cover" id="light" src="dayvi_light.png"></img>
-					<img id="dark" src="dayvi_dark.png" class="object-cover" style="background:transparent; padding:0px 0px 0px 20px; display: flex;"></img>
+				<div class="items-start" id="images" style="background:transparent; padding:20px 20px 0px 20px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px;">
+					<img class="object-cover" id="light" style="background:transparent; padding:0px 0px 0px 0px; display: flex;" src="dayvi_light.png"></img>
+					<img src="dayvi_dark.png" style="background:transparent; padding:0px 0px 0px 20px; display: flex;" id="dark" class="object-cover"></img>
 				</div>
-				<div class="relative items-start w-[100%] h-[300px]" id="empty" style="background:transparent; padding:0px 0px 0px 0px;"></div>
+				<div id="empty" style="background:transparent; padding:0px 0px 0px 0px;" class="relative items-start w-[100%] h-[300px]"></div>
 			</div>
-			<div class="w-[100%] h-[50px]" id="embed_footer" style="background:transparent; padding:0px 0px 0px 0px; gap:0px;">
-				<div id="footer" class="items-start w-[100%] h-[50px]" style="background:#000; padding:0px 20px 0px 20px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px; position: fixed; bottom: 0;">
-					<span style="background:transparent; padding:0px 0px 0px 0px; display: flex; font-size:16px; color:#fff; font-family:Arial; font-weight:normal; justify-content: left; align-items: center;" id="title" class="w-[100%] h-[100%]">
+			<div style="background:transparent; padding:0px 0px 0px 0px; gap:0px;" id="embed_footer" class="w-[100%] h-[50px]">
+				<div class="items-start w-[100%] h-[50px]" id="footer" style="background:#000; padding:0px 20px 0px 20px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px; position: fixed; bottom: 0;">
+					<span id="title" style="background:transparent; padding:0px 0px 0px 0px; display: flex; font-size:16px; color:#fff; font-family:Arial; font-weight:normal; justify-content: left; align-items: center;" class="w-[100%] h-[100%]">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
-					<div style="background:transparent; padding:0px 0px 0px 0px;" id="empty_center" class="relative items-start w-[100%] h-[100%]"></div>
-					<div id="powered" class="items-start h-[100%]" style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px;">
+					<div style="background:transparent; padding:0px 0px 0px 0px;" class="relative items-start w-[100%] h-[100%]" id="empty_center"></div>
+					<div style="background:transparent; padding:0px 0px 0px 0px; display:flex; flex-direction:row; flex-shrink: 0; overflow: hidden; gap:0px;" class="items-start h-[100%]" id="powered">
 						<span style="background:transparent; padding:0px 0px 0px 0px; display: flex; font-size:16px; color:#fff; font-family:Arial; font-weight:normal; justify-content: left; align-items: center;" class="h-[100%]" id="title">
 						Powered by 	
 						</span>
 						<a href="https://github.com/rubinsharks/pretty_mark">
-							<span id="prema" style="background:transparent; padding:0px 0px 0px 4px; display: flex; font-size:16px; color:#55f; font-family:Arial; font-weight:normal; justify-content: left; align-items: center;" class="h-[100%] underline">
+							<span style="background:transparent; padding:0px 0px 0px 4px; display: flex; font-size:16px; color:#55f; font-family:Arial; font-weight:normal; justify-content: left; align-items: center;" class="h-[100%] underline" id="prema">
 							PREMA	
 							</span>
 						</a>
