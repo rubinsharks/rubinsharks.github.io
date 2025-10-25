@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"></meta>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"></link>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
@@ -12,18 +12,18 @@
 		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
-		<div id="root" style="background:transparent; gap:0px;" class="flex flex-col overflow-hidden w-[100%] h-[100%]">
-			<div id="embed_header" style="background:transparent; gap:0px;" class="w-[100%]">
+		<div class="flex flex-col overflow-hidden w-[100%] h-[100%]" id="root" style="background:transparent; gap:0px;">
+			<div id="embed_header" class="w-[100%]" style="background:transparent; gap:0px;">
 				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
-							<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+							<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
 								<span class="self-center text-2xl font-semibold whitespace-nowrap">
 								Rubinsharks	
 								</span>
 							</a>
-							<button aria-controls="navbar-dropdown" data-collapse-toggle="navbar-dropdown" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded="false" type="button">
-								<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 17 14">
+							<button aria-controls="navbar-dropdown" type="button" data-collapse-toggle="navbar-dropdown" aria-expanded="false" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+								<svg aria-hidden="true" fill="none" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14">
 									<path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 								</svg>
 								<span class="sr-only">
@@ -33,7 +33,7 @@
 							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
 								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 									<li>
-										<a href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
+										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/">
 										Home	
 										</a>
 									</li>
@@ -43,12 +43,12 @@
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/blog/">
+										<a href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										Blog	
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/works/" aria-current="page">
+										<a aria-current="page" href="/works/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Works	
 										</a>
 									</li>
@@ -58,7 +58,7 @@
 					</nav>
 				</div>
 			</div>
-			<div style="background:transparent; gap:0px;" class="flex flex-col overflow-y-auto w-[100%] h-[100%] mx-auto max-w-screen-xl pl-[20px] pr-[20px] pb-[80px]" id="contents">
+			<div id="contents" style="background:transparent; gap:0px;" class="flex flex-col overflow-y-auto w-[100%] h-[100%] mx-auto max-w-screen-xl pl-[20px] pr-[20px] pb-[80px]">
 				<div class="w-full pb-[50px]">
 					<h1 class="text-4xl font-bold mb-8 mt-5 text-slate-900">
 						<span>
@@ -66,7 +66,7 @@
 						</span>
 					</h1>
 					<p class="text-slate-500 mt-1">
-						<img src="profile_small.jpeg" class="rounded-[10px]" alt="Profile"></img>
+						<img src="profile_small.jpeg" alt="Profile" class="rounded-[10px]"></img>
 					</p>
 					<h3 class="text-2xl font-bold mb-4 mt-5 text-slate-900">
 						<span>
@@ -161,16 +161,16 @@
 				</div>
 			</div>
 			<div style="background:transparent; gap:0px;" id="embed_footer" class="w-[100%] h-[50px]">
-				<div style="background:#000; gap:0px; position: fixed; bottom: 0;" id="footer" class="flex flex-row overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
+				<div id="footer" style="background:#000; gap:0px; position: fixed; bottom: 0;" class="flex flex-row overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
 					<span class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]" id="title">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
-					<div style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden h-[100%]" id="powered">
+					<div id="powered" style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden h-[100%]">
 						<span id="title" class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]">
 						Powered by 	
 						</span>
 						<a href="https://github.com/rubinsharks/pretty_mark">
-							<span class="bg-[transparent] text-[#55f] justify-left items-center flex h-[100%] underline pl-[4px]" id="prema">
+							<span id="prema" class="bg-[transparent] text-[#55f] justify-left items-center flex h-[100%] underline pl-[4px]">
 							PREMA	
 							</span>
 						</a>
