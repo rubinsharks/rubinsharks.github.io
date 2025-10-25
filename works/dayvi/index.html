@@ -12,9 +12,9 @@
 		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
-		<div class="items-start overflow-hidden w-[100%] h-[100%]" id="root" style="background:transparent; display:flex; flex-direction:column; gap:0px;">
-			<div style="background:transparent; gap:0px;" class="w-[100%]" id="embed_header">
-				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
+		<div style="background:transparent; display:flex; flex-direction:column; gap:0px;" id="root" class="items-start overflow-hidden w-[100%] h-[100%]">
+			<div id="embed_header" style="background:transparent; gap:0px;" class="w-[100%]">
+				<div class="w-[100%] mx-auto max-w-screen-xl" id="nav">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
 							<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
@@ -22,9 +22,9 @@
 								Rubinsharks	
 								</span>
 							</a>
-							<button data-collapse-toggle="navbar-dropdown" aria-controls="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded="false">
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" class="w-5 h-5" aria-hidden="true">
-									<path stroke="currentColor" stroke-linecap="round" d="M1 1h15M1 7h15M1 13h15" stroke-linejoin="round" stroke-width="2"></path>
+							<button aria-controls="navbar-dropdown" data-collapse-toggle="navbar-dropdown" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" type="button" aria-expanded="false">
+								<svg class="w-5 h-5" viewBox="0 0 17 14" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path stroke-linejoin="round" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
 								</svg>
 								<span class="sr-only">
 								Open main menu	
@@ -33,22 +33,22 @@
 							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
 								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/">
+										<a href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										home	
 										</a>
 									</li>
 									<li>
-										<a aria-current="page" href="/about_me/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+										<a href="/about_me/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										About me	
 										</a>
 									</li>
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/blog/">
+										<a aria-current="page" href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Blog	
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/works/">
+										<a href="/works/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										Works	
 										</a>
 									</li>
@@ -58,26 +58,25 @@
 					</nav>
 				</div>
 			</div>
-			<div id="contents" style="background:transparent; display:flex; flex-direction:column; gap:0px;" class="items-start overflow-y-auto w-[100%] h-[100%] mx-auto max-w-screen-xl">
+			<div class="items-start overflow-y-auto w-[100%] h-[100%] mx-auto max-w-screen-xl" id="contents" style="background:transparent; display:flex; flex-direction:column; gap:0px;">
 				<span id="title" class="flex bg-[transparent] text-[30px] text-[black] font-[montserrat] font-bold justify-left items-top pt-[20px] pl-[20px] pr-[20px]">
 				DayVI	
 				</span>
 				<span id="desc" class="flex bg-[transparent] text-[20px] text-[black] font-[montserrat] font-regular justify-left items-top pt-[12px] pl-[20px] pr-[20px]">
 				Simple Video Diary Summary.	
 				</span>
-				<div style="background:transparent; display:flex; flex-direction:row; gap:0px;" id="images" class="items-start overflow-x-auto pt-[20px] pl-[20px] pr-[20px]">
-					<img id="light" style="background:transparent; display: flex;" src="dayvi_light.png" class="object-cover rounded-[10px]"></img>
-					<img class="object-cover rounded-[10px] ml-[20px]" src="dayvi_dark.png" id="dark" style="background:transparent; display: flex;"></img>
+				<div id="images" style="background:transparent; display:flex; flex-direction:row; gap:0px;" class="items-start overflow-x-auto pt-[20px] pl-[20px] pr-[20px]">
+					<img id="light" src="dayvi_light.png" style="background:transparent; display: flex;" class="object-cover rounded-[10px]"></img>
+					<img style="background:transparent; display: flex;" id="dark" src="dayvi_dark.png" class="object-cover rounded-[10px] ml-[20px]"></img>
 				</div>
 				<div id="empty" style="background:transparent;" class="relative items-start w-[100%] h-[300px]"></div>
 			</div>
-			<div class="w-[100%] h-[50px]" id="embed_footer" style="background:transparent; gap:0px;">
-				<div id="footer" style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px]">
-					<span id="title" class="flex bg-[transparent] text-[16px] text-[#fff] font-[Arial] font-normal justify-left items-center w-[100%] h-[100%]">
+			<div id="embed_footer" style="background:transparent; gap:0px;" class="w-[100%] h-[50px]">
+				<div style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between" id="footer">
+					<span class="flex bg-[transparent] text-[16px] text-[#fff] font-[Arial] font-normal justify-left items-center h-[100%]" id="title">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
-					<div id="empty_center" class="relative items-start w-[100%] h-[100%]" style="background:transparent;"></div>
-					<div class="items-start overflow-hidden h-[100%]" id="powered" style="background:transparent; display:flex; flex-direction:row; gap:0px;">
+					<div style="background:transparent; display:flex; flex-direction:row; gap:0px;" class="items-start overflow-hidden h-[100%]" id="powered">
 						<span class="flex bg-[transparent] text-[16px] text-[#fff] font-[Arial] font-normal justify-left items-center h-[100%]" id="title">
 						Powered by 	
 						</span>
