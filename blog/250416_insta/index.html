@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8"></meta>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" rel="stylesheet"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"></link>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 		<script>
@@ -12,8 +12,8 @@
 		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
-		<div class="items-start overflow-hidden w-[100%] h-[100%]" id="root" style="background:transparent; display:flex; flex-direction:column; gap:0px;">
-			<div style="background:transparent; gap:0px;" class="w-[100%]" id="embed_header">
+		<div style="background:transparent; display:flex; flex-direction:column; gap:0px;" class="items-start overflow-hidden w-[100%] h-[100%]" id="root">
+			<div style="background:transparent; gap:0px;" id="embed_header" class="w-[100%]">
 				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
@@ -22,9 +22,9 @@
 								Rubinsharks	
 								</span>
 							</a>
-							<button type="button" aria-controls="navbar-dropdown" aria-expanded="false" data-collapse-toggle="navbar-dropdown" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" class="w-5 h-5" fill="none" aria-hidden="true">
-									<path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"></path>
+							<button class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" type="button" aria-controls="navbar-dropdown" aria-expanded="false" data-collapse-toggle="navbar-dropdown">
+								<svg viewBox="0 0 17 14" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true">
+									<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor" d="M1 1h15M1 7h15M1 13h15"></path>
 								</svg>
 								<span class="sr-only">
 								Open main menu	
@@ -43,12 +43,12 @@
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/blog/" aria-current="page">
+										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/blog/">
 										Blog	
 										</a>
 									</li>
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/works/">
+										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/works/">
 										Works	
 										</a>
 									</li>
@@ -58,7 +58,7 @@
 					</nav>
 				</div>
 			</div>
-			<div class="items-start overflow-y-auto w-[100%] h-[100%] {custom_class} pl-[20px] pr-[20px] pb-[80px]" id="contents" style="background:transparent; display:flex; flex-direction:column; gap:0px;">
+			<div id="contents" style="background:transparent; display:flex; flex-direction:column; gap:0px;" class="items-start overflow-y-auto w-[100%] h-[100%] {custom_class} pl-[20px] pr-[20px] pb-[80px]">
 				<div class="w-full pb-[50px]">
 					<h1 class="text-4xl font-bold mb-8 mt-5 text-slate-900">
 						<span>
@@ -117,12 +117,12 @@
 					</p>
 				</div>
 			</div>
-			<div class="w-[100%] h-[50px]" style="background:transparent; gap:0px;" id="embed_footer">
-				<div style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base" id="footer">
+			<div class="w-[100%] h-[50px]" id="embed_footer" style="background:transparent; gap:0px;">
+				<div style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" id="footer" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
 					<span class="flex bg-[transparent] text-[#fff] justify-left items-center h-[100%]" id="title">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
-					<div class="items-start overflow-hidden h-[100%]" style="background:transparent; display:flex; flex-direction:row; gap:0px;" id="powered">
+					<div id="powered" style="background:transparent; display:flex; flex-direction:row; gap:0px;" class="items-start overflow-hidden h-[100%]">
 						<span id="title" class="flex bg-[transparent] text-[#fff] justify-left items-center h-[100%]">
 						Powered by 	
 						</span>
