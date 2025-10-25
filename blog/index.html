@@ -12,19 +12,19 @@
 		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
-		<div id="root" class="flex flex-col overflow-hidden" style="background:transparent; gap:0px;">
+		<div id="root" style="background:transparent; gap:0px;" class="flex flex-col overflow-hidden">
 			<div id="embed_nav" style="background:transparent; gap:0px;" class="w-[100%]">
 				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
-							<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+							<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
 								<span class="self-center text-2xl font-semibold whitespace-nowrap">
 								Rubinsharks	
 								</span>
 							</a>
-							<button type="button" data-collapse-toggle="navbar-dropdown" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown" aria-expanded="false">
-								<svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 17 14">
-									<path stroke-width="2" d="M1 1h15M1 7h15M1 13h15" stroke-linecap="round" stroke="currentColor" stroke-linejoin="round"></path>
+							<button aria-expanded="false" aria-controls="navbar-dropdown" data-collapse-toggle="navbar-dropdown" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" type="button">
+								<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+									<path stroke="currentColor" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" stroke-linecap="round" stroke-linejoin="round"></path>
 								</svg>
 								<span class="sr-only">
 								Open main menu	
@@ -33,22 +33,22 @@
 							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
 								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/">
+										<a aria-current="page" href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Home	
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/about_me/">
+										<a href="/about_me/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										About me	
 										</a>
 									</li>
 									<li>
-										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/blog/">
+										<a href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
 										Blog	
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/works/">
+										<a aria-current="page" href="/works/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Works	
 										</a>
 									</li>
@@ -58,33 +58,33 @@
 					</nav>
 				</div>
 			</div>
-			<div style="background:transparent; gap:0px;" class="flex flex-col overflow-y-auto w-[100%] mx-auto max-w-screen-xl pl-[20px] pr-[20px]" id="contents">
-				<span class="bg-[transparent] text-[26px] text-[#000] font-[montserrat] font-bold justify-left items-top flex pt-[20px]" id="thinking_title">
+			<div style="background:transparent; gap:0px;" id="contents" class="flex flex-col overflow-y-auto w-[100%] mx-auto max-w-screen-xl pl-[20px] pr-[20px]">
+				<span class="bg-[transparent] text-[26px] text-[#000] font-[mono] font-bold justify-left items-top flex pt-[20px]" id="thinking_title">
 				Thinking	
 				</span>
-				<div id="mdlist_thinking" style="background:transparent; gap:0px;" class="flex flex-col overflow-y-auto w-[100%] pt-[20px]">
-					<div id="markdown_row" class="flex flex-row overflow-hidden" style="background:transparent; gap:0px;">
+				<div class="flex flex-col overflow-y-auto w-[100%] pt-[20px]" id="mdlist_thinking" style="background:transparent; gap:0px;">
+					<div style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden" id="markdown_row">
 						<a href="think_create_site">
-							<span id="title" class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline">
+							<span class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline" id="title">
 							정적 사이트 구축을 위해 Prema 제작	
 							</span>
 						</a>
 					</div>
-					<div id="markdown_row" style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden">
+					<div class="flex flex-row overflow-hidden" style="background:transparent; gap:0px;" id="markdown_row">
 						<a href="think_insta">
-							<span id="title" class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline">
+							<span class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline" id="title">
 							개발자가 Instagram을 하려면	
 							</span>
 						</a>
 					</div>
 				</div>
-				<span id="development_title" class="bg-[transparent] text-[26px] text-[#000] font-[montserrat] font-bold justify-left items-top flex pt-[20px]">
+				<span class="bg-[transparent] text-[26px] text-[#000] font-[mono] font-bold justify-left items-top flex pt-[20px]" id="development_title">
 				Development	
 				</span>
-				<div style="background:transparent; gap:0px;" id="mdlist_development" class="flex flex-col overflow-y-auto w-[100%] pt-[20px]">
-					<div class="flex flex-row overflow-hidden" style="background:transparent; gap:0px;" id="markdown_row">
+				<div class="flex flex-col overflow-y-auto w-[100%] pt-[20px]" style="background:transparent; gap:0px;" id="mdlist_development">
+					<div style="background:transparent; gap:0px;" id="markdown_row" class="flex flex-row overflow-hidden">
 						<a href="dev_test">
-							<span class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline" id="title">
+							<span id="title" class="bg-[transparent] text-[20px] text-[#000] justify-left items-top flex h-[40px] underline">
 							테스트	
 							</span>
 						</a>
@@ -92,12 +92,12 @@
 				</div>
 			</div>
 			<div style="background:transparent; gap:0px;" class="w-[100%] h-[50px]" id="embed_footer">
-				<div style="background:#000; gap:0px; position: fixed; bottom: 0;" id="footer" class="flex flex-row overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
+				<div class="flex flex-row overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base" style="background:#000; gap:0px; position: fixed; bottom: 0;" id="footer">
 					<span class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]" id="title">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
-					<div class="flex flex-row overflow-hidden h-[100%]" id="powered" style="background:transparent; gap:0px;">
-						<span class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]" id="title">
+					<div style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden h-[100%]" id="powered">
+						<span id="title" class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]">
 						Powered by 	
 						</span>
 						<a href="https://github.com/rubinsharks/pretty_mark">
