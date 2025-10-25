@@ -1,8 +1,8 @@
 <html>
 	<head>
 		<meta charset="UTF-8"></meta>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" rel="stylesheet"></link>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 		<script>
@@ -13,7 +13,7 @@
 	</head>
 	<body class="mx-auto bg-white w-screen h-screen">
 		<div style="background:transparent; display:flex; flex-direction:column; gap:0px;" class="items-start overflow-hidden w-[100%] h-[100%]" id="root">
-			<div id="embed_header" style="background:transparent; gap:0px;" class="w-[100%]">
+			<div class="w-[100%]" style="background:transparent; gap:0px;" id="embed_header">
 				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
 					<nav class="bg-white border-gray-200">
 						<div class="flex flex-wrap items-center justify-between p-4">
@@ -22,28 +22,28 @@
 								Rubinsharks	
 								</span>
 							</a>
-							<button class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded="false" type="button" aria-controls="navbar-dropdown" data-collapse-toggle="navbar-dropdown">
-								<svg fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-5 h-5" viewBox="0 0 17 14">
-									<path d="M1 1h15M1 7h15M1 13h15" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" stroke-width="2"></path>
+							<button aria-controls="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-expanded="false" data-collapse-toggle="navbar-dropdown">
+								<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-5 h-5" viewBox="0 0 17 14" fill="none">
+									<path stroke="currentColor" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" stroke-width="2" stroke-linecap="round"></path>
 								</svg>
 								<span class="sr-only">
 								Open main menu	
 								</span>
 							</button>
-							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
+							<div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
 								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="/">
-										home	
+										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page" href="#">
+										Home	
 										</a>
 									</li>
 									<li>
-										<a href="/about_me/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
+										<a href="/about_me/" aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										About me	
 										</a>
 									</li>
 									<li>
-										<a class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/blog/" aria-current="page">
+										<a aria-current="page" href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
 										Blog	
 										</a>
 									</li>
@@ -62,17 +62,17 @@
 				<span id="title" class="flex bg-[transparent] text-[30px] text-slate-950 font-[montserrat] font-bold justify-left items-top pt-[20px] pl-[20px] pr-[20px]">
 				DayVI	
 				</span>
-				<span class="flex bg-[transparent] text-[20px] text-slate-950 font-[montserrat] font-regular justify-left items-top pt-[12px] pl-[20px] pr-[20px]" id="desc">
+				<span id="desc" class="flex bg-[transparent] text-[20px] text-slate-950 font-[montserrat] font-regular justify-left items-top pt-[12px] pl-[20px] pr-[20px]">
 				Simple Video Diary Summary.	
 				</span>
-				<div class="items-start overflow-x-auto pt-[20px] pl-[20px] pr-[20px]" style="background:transparent; display:flex; flex-direction:row; gap:0px;" id="images">
-					<img style="background:transparent; display: flex;" id="light" src="dayvi_light.png" class="object-cover rounded-[10px]"></img>
-					<img class="object-cover rounded-[10px] ml-[20px]" style="background:transparent; display: flex;" src="dayvi_dark.png" id="dark"></img>
+				<div style="background:transparent; display:flex; flex-direction:row; gap:0px;" class="items-start overflow-x-auto pt-[20px] pl-[20px] pr-[20px]" id="images">
+					<img id="light" src="dayvi_light.png" style="background:transparent; display: flex;" class="object-cover rounded-[10px]"></img>
+					<img class="object-cover rounded-[10px] ml-[20px]" src="dayvi_dark.png" id="dark" style="background:transparent; display: flex;"></img>
 				</div>
-				<div id="empty" style="background:transparent;" class="relative items-start w-[100%] h-[300px]"></div>
+				<div class="relative items-start w-[100%] h-[300px]" id="empty" style="background:transparent;"></div>
 			</div>
-			<div style="background:transparent; gap:0px;" class="w-[100%] h-[50px]" id="embed_footer">
-				<div id="footer" style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
+			<div id="embed_footer" style="background:transparent; gap:0px;" class="w-[100%] h-[50px]">
+				<div style="background:#000; display:flex; flex-direction:row; gap:0px; position: fixed; bottom: 0;" id="footer" class="items-start overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
 					<span id="title" class="flex bg-[transparent] text-[#fff] justify-left items-center h-[100%]">
 					Copyright © 2025 Rubinsharks Inc.	
 					</span>
