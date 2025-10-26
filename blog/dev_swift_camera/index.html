@@ -1,0 +1,165 @@
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css"></link>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+		<script>
+		hljs.highlightAll();	
+		</script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://flowbite.com/docs/flowbite.min.js?v=3.1.2a"></script>
+	</head>
+	<body class="mx-auto bg-white w-screen h-screen">
+		<div id="root" style="background:transparent; gap:0px;" class="flex flex-col overflow-hidden w-[100%] h-[100%]">
+			<div class="w-[100%]" style="background:transparent; gap:0px;" id="embed_header">
+				<div id="nav" class="w-[100%] mx-auto max-w-screen-xl">
+					<nav class="bg-white border-gray-200">
+						<div class="flex flex-wrap items-center justify-between p-4">
+							<a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
+								<span class="self-center text-2xl font-semibold whitespace-nowrap">
+								Rubinsharks	
+								</span>
+							</a>
+							<button class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" type="button" data-collapse-toggle="navbar-dropdown" aria-controls="navbar-dropdown" aria-expanded="false">
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14" class="w-5 h-5" aria-hidden="true">
+									<path stroke="currentColor" stroke-linejoin="round" d="M1 1h15M1 7h15M1 13h15" stroke-width="2" stroke-linecap="round"></path>
+								</svg>
+								<span class="sr-only">
+								Open main menu	
+								</span>
+							</button>
+							<div id="navbar-dropdown" class="hidden w-full md:block md:w-auto">
+								<ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+									<li>
+										<a aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" href="/">
+										Home	
+										</a>
+									</li>
+									<li>
+										<a href="/about_me/" aria-current="page" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+										About me	
+										</a>
+									</li>
+									<li>
+										<a aria-current="page" href="/blog/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+										Blog	
+										</a>
+									</li>
+									<li>
+										<a href="/works/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">
+										Works	
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div id="contents" style="background:transparent; gap:0px;" class="flex flex-col overflow-y-auto w-[100%] h-[100%] mx-auto max-w-screen-xl pl-[20px] pr-[20px] pb-[80px]">
+				<div class="w-full pb-[50px]">
+					<h3 class="text-2xl font-bold mb-4 mt-5 text-slate-900">
+						<span>
+						초기 세팅	
+						</span>
+					</h3>
+					<pre class="flex">
+						<code class="language-swift">private var session = AVCaptureSession()
+private var previewLayer: AVCaptureVideoPreviewLayer!
+private let sessionQueue = DispatchQueue(label: "camera.session.queue") // 별도 큐
+private var movieOutput = AVCaptureMovieFileOutput()	</code>
+					</pre>
+					<h3 class="text-2xl font-bold mb-4 mt-5 text-slate-900">
+						<span>
+						영상 시작	
+						</span>
+					</h3>
+					<p class="text-slate-500 mt-1">
+						<span>
+						Camera Input을 통해 movieOutput이 출력되게 만들어주고 AudioInput을 넣어줘 Audio가 비디오 안에 내장될 수 있게 한다.	
+						</span>
+					</p>
+					<pre class="flex">
+						<code class="language-swift">/// 영상 관련 처리를 sessionQueue안에서 돌려줘야 한다.
+sessionQueue.async {
+    self.session.stopRunning()
+    self.session.beginConfiguration()
+    self.session.sessionPreset = .high
+    for input in self.session.inputs {
+        self.session.removeInput(input)
+    }
+    for output in self.session.outputs {
+        self.session.removeOutput(output)
+    }
+    guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front),
+          let input = try? AVCaptureDeviceInput(device: device)
+    else { return }
+    if self.session.canAddInput(input) {
+        self.session.addInput(input)
+    }
+    self.movieOutput = AVCaptureMovieFileOutput()
+    if self.session.canAddOutput(self.movieOutput) {
+        self.session.addOutput(self.movieOutput)
+    }
+    if let audioDevice = AVCaptureDevice.default(for: .audio),
+       let audioInput = try? AVCaptureDeviceInput(device: audioDevice),
+       self.session.canAddInput(audioInput) {
+            self.session.addInput(audioInput)
+    }
+    self.session.commitConfiguration()
+    self.session.startRunning()
+}	</code>
+					</pre>
+					<h3 class="text-2xl font-bold mb-4 mt-5 text-slate-900">
+						<span>
+						오디오 시작	
+						</span>
+					</h3>
+					<pre class="flex">
+						<code class="language-swift">sessionQueue.async {
+    self.session.stopRunning()
+    self.session.beginConfiguration()
+    for input in self.session.inputs {
+        self.session.removeInput(input)
+    }
+    for output in self.session.outputs {
+        self.session.removeOutput(output)
+    }
+    // 1️⃣ 현재 세션에 등록된 입력들 중 video를 제거
+    if let audioDevice = AVCaptureDevice.default(for: .audio),
+       let audioInput = try? AVCaptureDeviceInput(device: audioDevice),
+       self.session.canAddInput(audioInput) {
+        self.session.addInput(audioInput)
+    }
+    self.movieOutput = AVCaptureMovieFileOutput()
+    if self.session.canAddOutput(self.movieOutput) {
+        self.session.addOutput(self.movieOutput)
+    }
+    self.session.commitConfiguration()
+    self.session.startRunning()
+}	</code>
+					</pre>
+				</div>
+			</div>
+			<div class="w-[100%] h-[50px]" id="embed_footer" style="background:transparent; gap:0px;">
+				<div id="footer" style="background:#000; gap:0px; position: fixed; bottom: 0;" class="flex flex-row overflow-hidden w-[100%] h-[50px] pl-[20px] pr-[20px] justify-between text-xs sm:text-base">
+					<span class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]" id="title">
+					Copyright © 2025 Rubinsharks Inc.	
+					</span>
+					<div style="background:transparent; gap:0px;" class="flex flex-row overflow-hidden h-[100%]" id="powered">
+						<span id="title" class="bg-[transparent] text-[#fff] justify-left items-center flex h-[100%]">
+						Powered by 	
+						</span>
+						<a href="https://github.com/rubinsharks/pretty_mark">
+							<span id="prema" class="bg-[transparent] text-[#55f] justify-left items-center flex h-[100%] underline pl-[4px]">
+							PREMA	
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
